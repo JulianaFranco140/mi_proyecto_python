@@ -6,7 +6,6 @@ import pytest
 import sys
 import os
 
-# Agregar el directorio src al path para importar el módulo
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 from calculadora import Calculadora
@@ -85,11 +84,9 @@ class TestCalculadoraIntegracion:
     
     def test_operaciones_combinadas(self):
         """Prueba operaciones matemáticas combinadas."""
-        # (2 + 3) * 4 = 20
         resultado = self.calc.multiplicar(self.calc.sumar(2, 3), 4)
         assert resultado == 20
         
-        # (10 - 5) / 2 = 2.5
         resultado = self.calc.dividir(self.calc.restar(10, 5), 2)
         assert resultado == 2.5
         
@@ -101,13 +98,10 @@ class TestCalculadoraIntegracion:
     
     def test_casos_borde(self):
         """Prueba casos borde y extremos."""
-        # Números muy grandes
         assert self.calc.sumar(999999, 1) == 1000000
         
-        # Números decimales pequeños
         resultado = self.calc.sumar(0.1, 0.2)
         assert abs(resultado - 0.3) < 0.0001  # Debido a precisión de punto flotante
         
-        # Operaciones con cero
         assert self.calc.multiplicar(1000, 0) == 0
         assert self.calc.sumar(0, 0) == 0
