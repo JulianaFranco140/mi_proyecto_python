@@ -1,0 +1,7 @@
+# requirements.txt - Dependencias de producción
+# Este proyecto es simple y no requiere dependencias externas para funcionar
+# Pero aquí puedes agregar las que necesites en proyectos reales
+
+# Ejemplo de dependencias comunes:
+# requests==2.31.0
+# python-dotenv==1.0.0
