@@ -1,12 +1,11 @@
 """
 Script de pruebas simple para la calculadora
-Prueba de escritorio - No requiere dependencias externas
+Prueba de escritorio
 """
 
 import sys
 import os
 
-# Agregar el directorio src al path para poder importar la calculadora
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
 from calculadora import Calculadora
@@ -17,14 +16,12 @@ def probar_calculadora():
     Función principal que ejecuta todas las pruebas de la calculadora
     de manera sencilla y básica
     """
-    print("=" * 50)
+    print("\n")
     print("PRUEBAS DE LA CALCULADORA")
-    print("=" * 50)
+
     
-    # Crear una instancia de la calculadora
     calc = Calculadora()
     
-    # Contador de pruebas
     pruebas_totales = 0
     pruebas_exitosas = 0
     
@@ -99,16 +96,15 @@ def probar_calculadora():
     else:
         print(f"   ✗ ERROR: 15% de 200 = {resultado}, se esperaba {esperado}")
     
-    # Mostrar resumen final
-    print("\n" + "=" * 50)
+    print("\n")
     print("RESUMEN DE PRUEBAS")
-    print("=" * 50)
+
     print(f"Pruebas ejecutadas: {pruebas_totales}")
     print(f"Pruebas exitosas: {pruebas_exitosas}")
     print(f"Pruebas fallidas: {pruebas_totales - pruebas_exitosas}")
     
     if pruebas_exitosas == pruebas_totales:
-        print("\n ¡TODAS LAS PRUEBAS PASARON! La calculadora funciona correctamente.")
+        print("\n Todas las pruebas pasaron. La calculadora funciona correctamente.")
         return True
     else:
         print(f"\n {pruebas_totales - pruebas_exitosas} prueba(s) fallaron. Revisar la implementación.")
@@ -119,9 +115,9 @@ def pruebas_adicionales():
     """
     Pruebas adicionales con casos más variados
     """
-    print("\n" + "=" * 50)
+    print("\n")
     print("PRUEBAS ADICIONALES")
-    print("=" * 50)
+ 
     
     calc = Calculadora()
     
@@ -145,16 +141,13 @@ def pruebas_adicionales():
 if __name__ == "__main__":
     print("Iniciando pruebas de la calculadora...")
     
-    # Ejecutar pruebas principales
     exito = probar_calculadora()
     
-    # Ejecutar pruebas adicionales
     pruebas_adicionales()
     
-    # Mensaje final
-    print("\n" + "=" * 50)
+    print("\n")
     if exito:
         print(" PRUEBAS COMPLETADAS EXITOSAMENTE")
     else:
         print("ALGUNAS PRUEBAS FALLARON")
-    print("=" * 50)
+   
