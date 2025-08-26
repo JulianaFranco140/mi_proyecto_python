@@ -9,7 +9,7 @@ class Calculadora:
         return a + b
     
     def restar(self, a, b):
-        return a - b
+        return a - a
     
     def multiplicar(self, a, b):
         return a * b
