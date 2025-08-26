@@ -1,6 +1,5 @@
 """
 Script de pruebas simple para la calculadora
-Prueba de escritorio
 """
 
 import sys
@@ -13,8 +12,7 @@ from calculadora import Calculadora
 
 def probar_calculadora():
     """
-    Función principal que ejecuta todas las pruebas de la calculadora
-    de manera sencilla y básica
+    Función principal
     """
     print("\n")
     print("PRUEBAS DE LA CALCULADORA")
